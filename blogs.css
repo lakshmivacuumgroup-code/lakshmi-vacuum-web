@@ -1,0 +1,230 @@
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* This makes all cards have the same height if content differs */
+}
+
+.card-title {
+    margin-bottom: 0.75rem;/* --- Styling for the Blog List Page (blogs.html) --- */
+.blog-list-container {
+    width: 100%;
+    display: grid;
+    /* --- KEY CHANGE HERE --- */
+    /* This creates a responsive grid. It will fit as many 340px columns as it can. */
+    /* On large screens, this will be 3 columns. On smaller ones, it will be 2 or 1. */
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2.5rem;
+    padding: 2rem 0;
+}
+
+.blog-card {
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* --- KEY CHANGE HERE --- */
+    /* The card is now a vertical column to fit the grid layout */
+    display: flex;
+    flex-direction: column; 
+    border: 1px solid #e9ecef;
+    /* max-width is no longer needed */
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card img {
+    /* --- KEY CHANGE HERE --- */
+    /* The image now takes the full width of the card */
+    width: 100%; 
+    height: 220px; /* Fixed height for uniform card size */
+    object-fit: cover;
+}
+
+.card-content {
+}
+
+.card-excerpt {
+    font-size: 16px;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Pushes the button to the bottom */
+}
+
+.read-more-btn {
+    font-family: "figtree-regular", sans-serif;
+    display: inline-block;
+    background: linear-gradient(45deg, #002d59, #9e1424);
+    color: #FFFFFF !important;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    align-self: flex-start;
+}
+
+.read-more-btn:hover {
+    opacity: 0.85;
+}
+
+/* --- Styling for the Single Post Page (blog-single.html) --- */
+/* (This part remains unchanged) */
+.blog-post-content {
+    padding: 2rem 0 4rem 0;
+}
+
+.blog-post-content h1 {
+    font-size: 48px;
+    border-bottom: 2px solid #dc1f26;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-meta {
+    color: #888;
+    font-family: "figtree-light", sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    margin-bottom: 2.5rem;
+}
+
+.blog-post-content h4 {
+    font-family: "figtree-regular", sans-serif;
+    font-size: 26px;
+    color: #002e5a;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post-content p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 1.25em;
+}
+
+.blog-post-content strong {
+    font-family: "figtree-regular", sans-serif;
+    color: #000;
+}
+
+.blog-post-content ul {
+    list-style-type: none;
+    padding-left: 5px;
+    margin-bottom: 1.25em;
+}
+
+.blog-post-content li {
+    font-size: 20px;
+    font-family: "figtree-light", sans-serif;
+    padding-left: 25px;
+    margin-bottom: 0.75em;
+    position: relative;
+}
+
+.blog-post-content li::before {
+    content: '■';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #3fafd7;
+    font-size: 14px;
+}
+
+.formula-box {
+    background-color: #f0f4f8;
+    border-left: 4px solid #3fafd7;
+    padding: 20px;
+    margin: 2em 0;
+    font-size: 18px;
+    border-radius: 4px;
+    line-height: 1.6;
+}
+
+.formula-box code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+    color: #dc1f26;
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.back-to-blogs-link {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 12px 25px;
+    border: 1px solid #002e5a;
+    color: #002e5a;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: "figtree-regular", sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-to-blogs-link:hover {
+    background-color: #002e5a;
+    color: #fff;
+}
+
+.back-to-blogs-link i {
+    margin-right: 8px;
+}
+
+
+#cookie-popup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #f1f5fb; /* Light background */
+      color: #333;
+      padding: 20px;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      font-family: Arial, sans-serif;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      z-index: 1000;
+    }
+
+    #cookie-popup.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #cookie-popup p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    #cookie-popup a {
+      color: #007BFF;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    #cookie-popup a:hover {
+      text-decoration: underline;
+    }
+
+    #cookie-popup button {
+      background-color: #2e89ff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      display: block;
+      margin: 10px auto 0;
+    }
+
+    #cookie-popup button:hover {
+      background-color: #207ce5;
+    }

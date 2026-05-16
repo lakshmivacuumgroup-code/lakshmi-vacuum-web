@@ -1,0 +1,19 @@
+.certificate-images img {
+    border-radius: 0 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease !important;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.certificate-images img:hover {
+    transform: scale(1.07) !important;
+}
+
+@media (max-width: 575px) {
+    .certificate-images img {
+        width: 50% !important;
+        display: block;
+        margin: 0px auto !important;
+    }
+}

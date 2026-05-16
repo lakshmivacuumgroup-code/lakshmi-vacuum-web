@@ -1,0 +1,74 @@
+.read-more-link {
+  color: #000; /* Default black */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.read-more-link:hover {
+  color: #1f55ad; /* Blue on hover */
+}
+
+.read-more-link .arrow {
+  display: inline-block;
+  margin-left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.read-more-link:hover .arrow {
+  transform: translateX(3px);
+}
+
+#cookie-popup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #f1f5fb; /* Light background */
+      color: #333;
+      padding: 20px;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      font-family: Arial, sans-serif;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      z-index: 1000;
+    }
+
+    #cookie-popup.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #cookie-popup p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    #cookie-popup a {
+      color: #007BFF;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    #cookie-popup a:hover {
+      text-decoration: underline;
+    }
+
+    #cookie-popup button {
+      background-color: #2e89ff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      display: block;
+      margin: 10px auto 0;
+    }
+
+    #cookie-popup button:hover {
+      background-color: #207ce5;
+    }
