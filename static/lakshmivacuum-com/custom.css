@@ -371,7 +371,7 @@ p, li {
 }
 
 .parallax {
-    background-image: url(/static/lakshmivacuum-com/presence.webp);
+    background-image: url('/static/images/presence.webp');
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 500px;
@@ -414,13 +414,14 @@ p, li {
 }
 
 .parallax1 {
-    background-image: url(/static/lakshmivacuum-com/why-choose-us.webp);
+    background-image: url('/static/images/why-choose-us.webp');
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 650px;
     width: 100%;
     margin: 0 auto;
     background-position: center;
+    background-size: cover;
 }
 
 .parallax-div1 {
@@ -586,9 +587,9 @@ hr {
 }
 
 .layer-10 {
-    background-image: url(/static/lakshmivacuum-com/footer.webp);
+    background-image: url('/static/images/footer.webp');
     background-repeat: no-repeat;
-    padding: 50px 0 0 0;
+    padding: 50px 0 0;
     border-top: 2px solid #dc1f25;
 }
 
@@ -1056,9 +1057,8 @@ a {
     font-size: 25px;
     color: #fff;
 }
-
 .parallax2 {
-    background-image: url(/static/lakshmivacuum-com/key-benefits-bg.webp);
+    background-image: url('/static/images/key-benefits-bg.webp');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -1530,10 +1530,7 @@ button:disabled {
     }
 
     .top-img, .bottom-img {
-        .parallax1, .parallax3 {
-    display: none;
-}
-
+        display: none;
     }
 
     .year1 {
@@ -7326,4 +7323,124 @@ form {
         max-width: 70%;
         border-radius: 6px;
     }
+}
+/* ===== VACUUM FURNACE PRODUCTS PAGE FIX ===== */
+
+.inner-banner {
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 0;
+    border: none !important;
+}
+
+.inner-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none !important;
+}
+
+/* MICRO MENU */
+.micro-menu {
+    background: #ff2222;
+    padding: 0;
+    margin: 0;
+}
+
+.micro-menu .breadcrumb {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 40px;
+
+    background: #ff2222;
+}
+
+/* --- EXACT CSS FOR MICRO MENU (Based on your HTML) --- */
+
+/* 1. The Red Bar Container - Full Width & Centered Content */
+.micro-menu {
+    background-color: #d32f2f !important; /* The Red Color */
+    width: 100% !important; /* Touches both corners */
+    height: 85px !important; /* Optimal Height */
+    display: flex;
+    justify-content: center; /* Centers the content group */
+    align-items: center;
+    padding: 0 !important;
+}
+
+/* 2. The List (Breadcrumb) - Constrained Width & Even Spacing */
+.micro-menu nav ul.breadcrumb {
+    background-color: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-wrap: nowrap !important; /* Keeps icons in one row */
+    justify-content: space-evenly !important; /* Evenly distributes icons */
+    align-items: center !important;
+    width: 100%;
+    max-width: 1140px !important; /* Limits width so items cluster in center (Live Site Look) */
+    height: 100%;
+    list-style: none !important;
+}
+
+/* 3. Remove Bootstrap default '>' separators */
+.micro-menu nav ul.breadcrumb li + li::before {
+    content: none !important;
+    padding-right: 0;
+}
+
+/* 4. The List Items (Icons + Text) */
+.micro-menu nav ul.breadcrumb li.nav-item {
+    width: 16.6666667% !important; /* 100% / 6 items = Equal Spacing */
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #ffffff !important;
+    background: transparent !important; /* Removes the Blue Box on Active items */
+    transition: 0.3s;
+}
+
+/* 5. Links styling */
+.micro-menu nav ul.breadcrumb li.nav-item a {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    width: 100%;
+    height: 100%;
+}
+
+/* 6. Icons - Size and Color */
+.micro-menu nav ul.breadcrumb li.nav-item img {
+    height: 45px !important;
+    width: auto !important;
+    margin-bottom: 5px;
+    filter: brightness(0) invert(1); /* Forces icons to be White */
+    opacity: 0.9;
+}
+
+/* 7. Text - Size and Weight */
+.micro-menu nav ul.breadcrumb li.nav-item p {
+    margin: 0 !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important;
+    line-height: 1.2;
+}
+
+/* 8. Active State - Ensures it stays white like the live site */
+.micro-menu nav ul.breadcrumb li.nav-item.active {
+    background-color: transparent !important;
+    color: #ffffff !important;
 }
