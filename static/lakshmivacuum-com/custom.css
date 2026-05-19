@@ -929,7 +929,7 @@ a {
 }
 
 .parallax4 {
-    background-image: url(/static/lakshmivacuum-com/values-bg.webp);
+    background-image: url('/static/images/values-bg.webp');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -1881,7 +1881,7 @@ button:disabled {
 }
 
 .parallax3 {
-    background-image: url(/static/lakshmivacuum-com/quality-practices-bg.webp);
+    background-image: url('/static/images/quality-practices-bg.webp');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -7324,123 +7324,77 @@ form {
         border-radius: 6px;
     }
 }
-/* ===== VACUUM FURNACE PRODUCTS PAGE FIX ===== */
+/* FIX SOCIAL ICONS */
 
-.inner-banner {
-    padding: 0 !important;
-    margin: 0 !important;
-    line-height: 0;
-    border: none !important;
+.fa-linkedin-in::before {
+    content: "\f08c" !important;
+    font-family: "Font Awesome 6 Brands" !important;
 }
 
-.inner-banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border: none !important;
+.fa-youtube::before {
+    content: "\f167" !important;
+    font-family: "Font Awesome 6 Brands" !important;
 }
 
-/* MICRO MENU */
-.micro-menu {
-    background: #ff2222;
-    padding: 0;
-    margin: 0;
+.fa-arrow-up::before {
+    content: "\f062" !important;
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
 }
 
-.micro-menu .breadcrumb {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+/* =========================
+   GLOBAL LOGO FIX
+========================= */
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 40px;
+/* HEADER LOGO */
 
-    background: #ff2222;
-}
-
-/* --- EXACT CSS FOR MICRO MENU (Based on your HTML) --- */
-
-/* 1. The Red Bar Container - Full Width & Centered Content */
-.micro-menu {
-    background-color: #d32f2f !important; /* The Red Color */
-    width: 100% !important; /* Touches both corners */
-    height: 85px !important; /* Optimal Height */
-    display: flex;
-    justify-content: center; /* Centers the content group */
-    align-items: center;
-    padding: 0 !important;
-}
-
-/* 2. The List (Breadcrumb) - Constrained Width & Even Spacing */
-.micro-menu nav ul.breadcrumb {
-    background-color: transparent !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: flex !important;
-    flex-wrap: nowrap !important; /* Keeps icons in one row */
-    justify-content: space-evenly !important; /* Evenly distributes icons */
-    align-items: center !important;
-    width: 100%;
-    max-width: 1140px !important; /* Limits width so items cluster in center (Live Site Look) */
-    height: 100%;
-    list-style: none !important;
-}
-
-/* 3. Remove Bootstrap default '>' separators */
-.micro-menu nav ul.breadcrumb li + li::before {
-    content: none !important;
-    padding-right: 0;
-}
-
-/* 4. The List Items (Icons + Text) */
-.micro-menu nav ul.breadcrumb li.nav-item {
-    width: 16.6666667% !important; /* 100% / 6 items = Equal Spacing */
-    padding: 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    color: #ffffff !important;
-    background: transparent !important; /* Removes the Blue Box on Active items */
-    transition: 0.3s;
-}
-
-/* 5. Links styling */
-.micro-menu nav ul.breadcrumb li.nav-item a {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    color: #ffffff !important;
-    text-decoration: none !important;
-    width: 100%;
-    height: 100%;
-}
-
-/* 6. Icons - Size and Color */
-.micro-menu nav ul.breadcrumb li.nav-item img {
-    height: 45px !important;
+header img,
+.logo img,
+.navbar-brand img,
+a.menu img {
     width: auto !important;
-    margin-bottom: 5px;
-    filter: brightness(0) invert(1); /* Forces icons to be White */
-    opacity: 0.9;
+    height: 80px !important;
+    max-height: 80px !important;
+    object-fit: contain !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    display: block !important;
 }
 
-/* 7. Text - Size and Weight */
-.micro-menu nav ul.breadcrumb li.nav-item p {
-    margin: 0 !important;
-    font-size: 13px !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
-    color: #ffffff !important;
-    line-height: 1.2;
+/* FOOTER LOGO */
+
+footer img,
+.footer img,
+footer .logo img {
+    width: auto !important;
+    height: 80px !important;
+    max-height: 80px !important;
+    object-fit: contain !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    display: block !important;
 }
 
-/* 8. Active State - Ensures it stays white like the live site */
-.micro-menu nav ul.breadcrumb li.nav-item.active {
-    background-color: transparent !important;
-    color: #ffffff !important;
+/* Prevent parent containers shrinking logo */
+
+header .col-lg-4,
+header .menu,
+.navbar-brand,
+.logo,
+footer .logo,
+footer .media {
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Remove faded effect */
+
+header,
+footer,
+.top-header,
+.navigation,
+.navbar {
+    opacity: 1 !important;
 }
