@@ -2104,7 +2104,8 @@ html, body {
 }
 
 .parallax5 {
-    background-image: url(/static/lakshmivacuum-com/manufacturing-par-excellence.webp);
+    /* This assumes your CSS file is in a folder next to the 'images' folder */
+    background-image: url(../images/manufacturing-par-excellence.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
